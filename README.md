@@ -1,17 +1,22 @@
-# @weblueth/custom
+# @weblueth/gattbuilder
 
-@weblueth, custom template.
+Web Bluetooth gatt builder.
 
-[Live Demo (GitHub Pages)](https://jp-rad.github.io/weblueth-custom/)
+> **Note** Gatt Builder Utilities
+> 
+> These gatt builder utilities are adapted from parts of the [microbit-web-bluetooth](https://github.com/thegecko/microbit-web-bluetooth) library.
+> 
+> https://github.com/thegecko/microbit-web-bluetooth
+> 
 
 ## Installation:
 
 ```bash
-npm install @weblueth/custom --save-dev
+npm install @weblueth/gattbuilder --save-dev
 ```
 
 or
 
 ```bash
-yarn add --dev @weblueth/custom
+yarn add --dev @weblueth/gattbuilder
 ```
