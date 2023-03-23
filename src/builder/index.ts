@@ -7,7 +7,7 @@ export function createServiceBuilder(services: BluetoothRemoteGATTService[]): Se
     return new ServiceBuilder(services);
 }
 
-import {canonicalServiceUUID} from "./util/uuid-util"
+import { canonicalServiceUUID } from "./util/uuid-util"
 
 /*
 * micro:bit Web Bluetooth

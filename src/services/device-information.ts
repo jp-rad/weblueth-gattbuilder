@@ -23,17 +23,17 @@
 * SOFTWARE.
 */
 
-import { ServiceHelper } from "../service-helper";
+import { ServiceHelper } from "../builder";
 
 /**
  * @hidden
  */
 export enum DeviceInformationCharacteristic {
-    modelNumber = "00002a24-0000-1000-8000-00805f9b34fb",
-    serialNumber = "00002a25-0000-1000-8000-00805f9b34fb",
-    firmwareRevision = "00002a26-0000-1000-8000-00805f9b34fb",
-    hardwareRevision = "00002a27-0000-1000-8000-00805f9b34fb",
-    manufacturer = "00002a29-0000-1000-8000-00805f9b34fb"
+    modelNumber = "model_number_string", // "00002a24-0000-1000-8000-00805f9b34fb",
+    serialNumber = "serial_number_string", // "00002a25-0000-1000-8000-00805f9b34fb",
+    firmwareRevision = "firmware_revision_string", // "00002a26-0000-1000-8000-00805f9b34fb",
+    hardwareRevision = "hardware_revision_string", // "00002a27-0000-1000-8000-00805f9b34fb",
+    manufacturer = "manufacturer_name_string" // "00002a29-0000-1000-8000-00805f9b34fb"
 }
 
 /**
@@ -70,7 +70,7 @@ export class DeviceInformationService {
     /**
      * @hidden
      */
-    public static uuid = "0000180a-0000-1000-8000-00805f9b34fb";
+    public static uuid = "device_information"; // "0000180a-0000-1000-8000-00805f9b34fb";
 
     /**
      * @hidden
