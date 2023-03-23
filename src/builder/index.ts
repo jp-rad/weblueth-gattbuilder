@@ -7,6 +7,8 @@ export function createServiceBuilder(services: BluetoothRemoteGATTService[]): Se
     return new ServiceBuilder(services);
 }
 
+import {canonicalServiceUUID} from "./util/uuid-util"
+
 /*
 * micro:bit Web Bluetooth
 * Copyright (c) 2019 Rob Moran
@@ -73,7 +75,8 @@ class ServiceBuilder {
     }
 
     public async createService<T>(serviceClass: (new (service: BluetoothRemoteGATTService) => T) & Service): Promise<T | undefined> {
-        const found = this.services.find(service => service.uuid === serviceClass.uuid);
+        const canonical = canonicalServiceUUID(serviceClass.uuid)
+        const found = this.services.find(service => service.uuid === canonical);
 
         if (!found) {
             return undefined;
