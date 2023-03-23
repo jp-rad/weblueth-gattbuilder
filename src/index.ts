@@ -15,7 +15,7 @@ import {
 import {
     DeviceInformation,
     DeviceInformationService
-} from "./services/device-information";
+} from "./services/DeviceInformationService";
 
 export {
     canonicalCharacteristicUUID,
