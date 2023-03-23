@@ -25,6 +25,7 @@
 
 import { EventEmitter } from "events";
 import { PromiseQueue } from "./promise-queue";
+import { canonicalCharacteristicUUID } from "../uuid-util";
 
 /**
  * @hidden
@@ -51,7 +52,8 @@ export class ServiceHelper {
             this.characteristics = await this.service.getCharacteristics();
         }
 
-        return this.characteristics.find(characteristic => characteristic.uuid === uuid);
+        const canonical = canonicalCharacteristicUUID(uuid);
+        return this.characteristics.find(characteristic => characteristic.uuid === canonical);
     }
 
     public async getCharacteristicValue(uuid: BluetoothCharacteristicUUID): Promise<DataView> {
