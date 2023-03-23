@@ -1,6 +1,6 @@
 {
   "name": "@weblueth/gattbuilder",
-  "version": "0.0.4",
+  "version": "0.0.5-alpha.0",
   "description": "@weblueth, gatt builder.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
