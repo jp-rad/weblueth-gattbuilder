@@ -5,6 +5,7 @@ import {
     createServiceBuilder
 } from "./builder";
 import {
+    DeviceInformation,
     DeviceInformationService
 } from "./services/device-information";
 
@@ -14,5 +15,6 @@ export {
     ServiceHelper,
     createServiceBuilder,
 
+    DeviceInformation,
     DeviceInformationService
 };
