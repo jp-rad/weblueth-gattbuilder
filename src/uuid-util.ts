@@ -7,11 +7,12 @@
  * descriptors:
  *   https://github.com/WebBluetoothCG/registries/blob/master/gatt_assigned_descriptors.txt
  */
+
 declare module BluetoothUUID {
-    export function getService(name: BluetoothServiceUUID): string;
-    export function getCharacteristic(name: BluetoothCharacteristicUUID): string;
-    export function getDescriptor(name: BluetoothDescriptorUUID): string;
-    export function canonicalUUID(alias: BluetoothServiceUUID | BluetoothCharacteristicUUID | BluetoothDescriptorUUID): string;
+    export function getService(name: BluetoothServiceUUID): BluetoothServiceUUID;
+    export function getCharacteristic(name: BluetoothCharacteristicUUID): BluetoothCharacteristicUUID;
+    export function getDescriptor(name: BluetoothDescriptorUUID): BluetoothDescriptorUUID;
+    export function canonicalUUID(alias: BluetoothServiceUUID | BluetoothCharacteristicUUID | BluetoothDescriptorUUID): BluetoothServiceUUID | BluetoothCharacteristicUUID | BluetoothDescriptorUUID;
 }
 
 export function canonicalServiceUUID(uuid: BluetoothServiceUUID) {

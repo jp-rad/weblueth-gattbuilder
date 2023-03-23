@@ -23,6 +23,7 @@
 * SOFTWARE.
 */
 
+import { canonicalCharacteristicUUID } from "../uuid-util";
 import { ServiceHelper } from "../builder";
 
 /**
@@ -114,7 +115,8 @@ export class DeviceInformationService {
 
     private async readStringCharacteristic(uuid: BluetoothCharacteristicUUID): Promise<string | undefined> {
         try {
-            const view = await this.helper.getCharacteristicValue(uuid);
+            const canonical = canonicalCharacteristicUUID(uuid);
+            const view = await this.helper.getCharacteristicValue(canonical);
             const buffer = view.buffer.slice(view.byteOffset, view.byteOffset + view.byteLength);
             return String.fromCharCode.apply(null, Array.from(new Uint8Array(buffer)));
         } catch (_e) {

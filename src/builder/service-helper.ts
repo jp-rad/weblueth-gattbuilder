@@ -25,7 +25,7 @@
 
 import { EventEmitter } from "events";
 import { PromiseQueue } from "./promise-queue";
-import { canonicalCharacteristicUUID } from "./util/uuid-util";
+import { canonicalCharacteristicUUID } from "../uuid-util";
 
 /**
  * @hidden
